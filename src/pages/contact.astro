@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Contact Us - HealthPro Clinic">
+  <slot name="nav"><NavBar /></slot>
+
+  <section class="bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required />
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required />
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="4" required
+          ></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn mt-3">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <slot name="footer"><Footer /></slot>
+</BaseLayout>

@@ -1,0 +1,9 @@
+@use "./_custom" as *;
+
+body {
+  font-family: sans-serif !important;
+}
+
+.header {
+  font-size: $font-xlarge;
+}

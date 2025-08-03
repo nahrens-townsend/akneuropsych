@@ -1,0 +1,25 @@
+@use "./_custom";
+
+// Import Bootstrap using @use to ensure your overrides apply before it
+@use "bootstrap/scss/bootstrap" with (
+  // colors
+  $primary: custom.$primary,
+  $secondary: custom.$secondary,
+  $info: custom.$info,
+  $light: custom.$light,
+  $dark: custom.$dark,
+
+  // font sizes
+  $display-font-sizes: (
+      1: 5rem,
+      2: 4.5rem,
+      3: 4rem,
+      4: 3.5rem,
+      5: 3rem,
+      6: 2.25rem
+    )
+);
+
+div {
+  font-size: 1.25rem;
+}

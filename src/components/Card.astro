@@ -1,0 +1,19 @@
+---
+import "../styles/card.scss";
+
+const { title, icon, description } = Astro.props;
+---
+
+<div class="col-12 col-lg-4">
+  <div class="card shadow-sm h-100">
+    <div
+      class="card-body d-flex flex-column align-items-center justify-content-start gap-3"
+    >
+      <h5 class="card-title h4">{title}</h5>
+      <i class={`icon ${icon}`}></i>
+      <p class="card-text">
+        {description}
+      </p>
+    </div>
+  </div>
+</div>

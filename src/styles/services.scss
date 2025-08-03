@@ -1,0 +1,38 @@
+@use "./_custom" as *;
+
+.services-section {
+  background-color: $blue-light;
+  padding: 6rem 8rem;
+  gap: 50px;
+
+  //responsive
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 1rem;
+  }
+
+  .row {
+    //responsive
+    @include media-breakpoint-down(lg) {
+      gap: 20px;
+    }
+  }
+}
+
+.overview-section {
+  padding: 6rem 8rem;
+
+  //responsive
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 1rem;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.pill-section {
+  .row {
+    background-color: $blue-light;
+  }
+}

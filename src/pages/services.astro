@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/services.scss";
+import Card from "../components/Card.astro";
+---
+
+<!-- START THE CONTENT FOR THE INTRO -->
+<BaseLayout title="Our Services - AK Neuropsychology">
+  <slot name="nav"><NavBar /></slot>
+  <section
+    id="services"
+    class="services-section row text-center justify-content-center animate__animated animate__fadeInLeft"
+  >
+    <div class="col-md-8">
+      <div class="d-flex flex-column gap-3 text-secondary">
+        <h1 class="header m-0">Services</h1>
+        <div class="description">
+          At AK Neuropsychology, we offer a range of specialized psychological
+          and neuropsychological assessments designed to support your cognitive,
+          emotional, and decision-making well-being. Whether you're looking to
+          establish a cognitive baseline, better understand changes after an
+          injury, or explore emotional or capacity concerns, our evidence-based
+          evaluations provide the insight needed to guide treatment, support
+          planning, and promote peace of mind.
+        </div>
+      </div>
+    </div>
+    <div
+      class="row services-title-container text-center justify-content-center"
+    >
+      <Card
+        title="Baseline Cognitive Screening"
+        icon="fa-solid fa-brain"
+        description="A 3-hour assessment designed to document current cognitive abilities, detect early signs of neurological conditions, and establish a comparison point for future changes due to injury or illness."
+      />
+      <Card
+        title="Neuropsychological Evaluation"
+        icon="fa-solid fa-book"
+        description="A detailed 8–10 hour assessment for individuals affected by brain injuries or neurological conditions. Helps clarify diagnosis, guide treatment planning, and support rehabilitation efforts."
+      />
+      <Card
+        title="Decision-Making Capacity"
+        icon="fa-regular fa-pen-to-square"
+        description="Evaluates an individual’s ability to understand and appreciate decisions related to personal or financial matters. Often used when there are concerns about declining mental capacity."
+      />
+    </div>
+  </section>
+
+  <section
+    id="overview-section"
+    class="overview-section row justify-content-center animate__animated animate__fadeInUp"
+  >
+    <div class="col-md-12 d-flex flex-column gap-5">
+      <h2 class="h1 purpose-title text-info m-0">Overview:</h2>
+      <div>
+        <div class="row gap-3">
+          <h3 class="">Neuropsychological Screening / Baseline Assessment</h3>
+          <div class="">
+            This assessment is appropriate for individuals who wish to document
+            their cognitive abilities in the absence of illness or injury. This
+            assessment may also be used to determine if there are subtle changes
+            in cognitive abilities associated with early disease process or mild
+            injuries.
+          </div>
+          <div class="">
+            The results may be used to:
+            <ul class="mb-0">
+              <li class="list-group-item pb-0">
+                <span><i class="fas fa-arrow-right me-1"></i></span>
+                Provide a healthy baseline to which to compare possible future brain
+                injury or illness.
+              </li>
+              <li class="list-group-item pb-0">
+                <span><i class="fas fa-arrow-right me-1"></i></span>
+                Monitor changes over time.
+              </li>
+              <li class="list-group-item pb-0">
+                <span><i class="fas fa-arrow-right me-1"></i></span>
+                Detect early changes associated with medical conditions, including
+                dementia.
+              </li>
+            </ul>
+          </div>
+          <div>
+            The assessment process involves and interview and formal testing,
+            which will take approximately three hours. A written summary of the
+            results will be provided and the results will be discussed in a
+            follow-up appointment.
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="row gap-3">
+          <h3 class="">Neuropsychological Assessment</h3>
+          <div class="">
+            This assessment is more intensive than the screening / baseline
+            assessment and is appropriate for individuals who have sustained an
+            injury to their brain or have developed a neurological condition.
+            Neuropsychological assessment results may inform diagnosis and
+            treatment / intervention / rehabilitation.
+          </div>
+          <div>
+            The assessment process involves an interview and formal testing. The
+            assessment can be expected to take eight to ten hours to complete
+            and may occur over two days. A written report is generated and the
+            results will be discussed in a follow-up appointment.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row gap-3">
+          <h3 class="">Capacity Assessment</h3>
+          <div class="">
+            Capacity assessments are undertaken if there is a legitimate concern
+            / evidence that an individual’s ability to make decisions regarding
+            their personal and/or financial well-being has deteriorated. A
+            capacity assessment evaluates the individual’s mental capacity to
+            understand issues involved in decision making and the ability to
+            appreciate the consequences of their choices.
+          </div>
+          <div>
+            The assessment process involves a clinical interview with the
+            individual being evaluated, as well as interview of other involved
+            individuals (e.g., family). In some cases, some cognitive tests may
+            be administered.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row gap-3">
+          <h3 class="">Psychological Assessment</h3>
+          <div class="">
+            A psychological assessment is undertaken when an individual has
+            developed difficulties associated with emotions, stress, coping, or
+            had an adverse emotional reaction to a life event. This type of
+            evaluation will assist in understanding an individual’s emotional
+            functioning, personality characteristics, coping styles, and other
+            factors that have an impact on day-to-day function.
+          </div>
+          <div>
+            The assessment process involves a clinical interview and formal
+            testing. The assessment can be expected to take most of a day. A
+            written report is generated and the results will be discussed in a
+            follow-up appointment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <slot name="footer"><Footer /></slot>
+</BaseLayout>
