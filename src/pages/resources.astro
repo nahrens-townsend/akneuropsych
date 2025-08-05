@@ -3,16 +3,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 ---
-<BaseLayout title="Resources - HealthPro Clinic">
+
+<BaseLayout title="Resources - AK Neuropsychology">
   <slot name="nav"><NavBar /></slot>
 
   <section class="bg-light">
     <div class="container text-center">
       <h2 class="text-primary mb-4">Patient Resources</h2>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><a href="#" class="text-decoration-none">Downloadable Patient Intake Form</a></li>
-        <li class="list-group-item"><a href="#" class="text-decoration-none">COVID-19 Clinic Policy</a></li>
-        <li class="list-group-item"><a href="#" class="text-decoration-none">Emergency Contact Guide</a></li>
+        <li class="list-group-item">
+          <a href="#" class="text-decoration-none"
+            >Downloadable Patient Intake Form</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="text-decoration-none">COVID-19 Clinic Policy</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#" class="text-decoration-none">Emergency Contact Guide</a>
+        </li>
       </ul>
     </div>
   </section>
