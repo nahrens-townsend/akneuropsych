@@ -1,21 +1,62 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/meet.scss";
 ---
 
-<BaseLayout title="About Us - AK Neuropsychology">
+<BaseLayout title="Meet Dr. Kilgour - AK Neuropsychology">
   <slot name="nav"><NavBar /></slot>
-
-  <section class="bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">About Us</h2>
-      <p class="lead text-center">
-        HealthPro Clinic has served the local community for over 15 years,
-        offering a wide range of medical services through a team of dedicated
-        professionals. Our philosophy is centered around preventative care,
-        transparency, and patient education.
-      </p>
+  <img
+    class="header-image w-100 object-fit-cover"
+    src="/images/header-img-3.jpg"
+    alt=""
+  />
+  <section
+    id="meet-section"
+    class="meet-section row justify-content-center animate__animated animate__fadeInUp"
+  >
+    <div class="col-md-12 d-flex flex-column gap-3">
+      <h2 class="h1 purpose-title text-primary m-0">Meet Dr. Kilgour:</h2>
+      <div class="d-flex flex-column gap-3 meet-description">
+        <div class="headshot-wrapper">
+          <img
+            class="headshot object-fit-cover float-start me-3 mb-1 rounded-circle border border-primary border-2"
+            src="/images/headshot.jpg"
+            alt=""
+          />
+          <div>
+            Andrea graduated with a doctorate degree, at the top of her class,
+            from Queen’s University in 2003. Throughout her clinical psychology
+            education and training, she focused on Neuropsychology and completed
+            the accredited residency program at the Ottawa Hospital. After
+            graduation, she moved to Winnipeg, MB, where she took up a joint
+            appointment with the University of Manitoba, Faculty of Medicine and
+            the Winnipeg Regional Health Authority, as an assistant professor /
+            clinical academic. Her work continued to focus on Neuropsychological
+            Assessment with a wide variety of patients, but primarily those for
+            whom neurosurgery was being considered. In addition to clinical
+            work, she has published and presented over 80 peer- reviewed papers,
+            conference presentations, and invited addresses. She has received a
+            number of research grants and has served as a reviewer for
+            scientific journals, as well as grant-funding research councils. In
+            2014, Dr. Kilgour moved to Alberta, where she has continued to
+            practice in both the public and private sectors.
+          </div>
+        </div>
+        <div>
+          Throughout her career, she has completed assessments for the purposes
+          of clinical care, insurance, personal injury, documentation of
+          intellectual disability, dementia queries, and sport concussion and
+          return-to-play issues.
+        </div>
+        <div>
+          Her professional goal is to provide timely, high-quality
+          neuropsychological services to individuals and assist in promoting
+          understanding of the intimate relationship among cognitive, mental,
+          and physical health.
+        </div>
+      </div>
     </div>
   </section>
 

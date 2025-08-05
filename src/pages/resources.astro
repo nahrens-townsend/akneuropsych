@@ -1,27 +1,155 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/resources.scss";
 ---
 
-<BaseLayout title="Resources - AK Neuropsychology">
+<BaseLayout title="Frequently Asked Questions - AK Neuropsychology">
   <slot name="nav"><NavBar /></slot>
+  <img
+    class="header-image w-100 object-fit-cover"
+    src="/images/header-img-4.jpg"
+    alt=""
+  />
+  <section
+    id="resources-section"
+    class="resources-section row justify-content-center animate__animated animate__fadeInUp"
+  >
+    <div class="col-md-12 d-flex flex-column gap-3">
+      <h2 class="h1 purpose-title text-primary m-0">Resources For You:</h2>
+      <p class="text-muted mb-4">
+        The resources below include downloadable fact sheets and trusted links
+        to help you learn more about psychological and neuropsychological
+        topics. These materials are provided to support your understanding and
+        well-being.
+      </p>
 
-  <section class="bg-light">
-    <div class="container text-center">
-      <h2 class="text-primary mb-4">Patient Resources</h2>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-          <a href="#" class="text-decoration-none"
-            >Downloadable Patient Intake Form</a>
-        </li>
-        <li class="list-group-item">
-          <a href="#" class="text-decoration-none">COVID-19 Clinic Policy</a>
-        </li>
-        <li class="list-group-item">
-          <a href="#" class="text-decoration-none">Emergency Contact Guide</a>
-        </li>
-      </ul>
+      <div class="pdf-resources-section">
+        <h3>
+          <span>PDF Resources</span>
+        </h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_Concussions.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Concussions</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_CognitiveDisordersAndDementia.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Cognitive Disorders and Dementia</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_Depression.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Depression</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_PTSD.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Post-Traumatic Stress Disorder</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_GeneralizedAnxietyDisorder.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Generalized Anxiety Disorder</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_HealthAnxiety.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Health Anxiety</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_SubstanceAbuse.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Substance Abuse</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_ChronicPain.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Chronic Pain</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_Insomnia.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Insomnia</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_PhysicalActivity_MentalHealth_Motivation.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Physical Activity, Mental Health,
+              and Motivation</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://cpa.ca/docs/File/Publications/FactSheets/PsychologyWorksFactSheet_PhysicalActivity.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >“Psychology Works” Fact Sheet: Physical Activity</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="link-resources-section">
+        <h3 class="">
+          <span>Link Resources</span>
+        </h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a
+              href="https://www.cap.ab.ca/"
+              target="_blank"
+              rel="noopener noreferrer">College of Alberta Psychologists</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://www.psychologistsassociation.ab.ca/"
+              target="_blank"
+              rel="noopener noreferrer">Psychological Association of Alberta</a
+            >
+          </li>
+          <li class="list-group-item">
+            <a
+              href="https://collegiatesportsmedicine.ca/services/sport-neuropsychology/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Collegiate Sport Medicine Clinic, Red Deer, AB
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

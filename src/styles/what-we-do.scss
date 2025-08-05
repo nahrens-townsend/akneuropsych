@@ -1,22 +1,27 @@
 @use "./_custom" as *;
 
 .intro-section {
-  background-color: $blue-light;
-  padding: 6rem 8rem;
-  gap: 70px;
+  height: 50vh;
+  background-image: url("/images/header-img-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  //responsive
-  @include media-breakpoint-down(xl) {
-    padding: 4rem 1rem;
+  .content {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   }
 
   .header {
-    border-bottom: 2px solid $secondary;
-    width: fit-content;
+    font-weight: 600;
+    font-size: 3rem !important;
 
     //responsive
+    @include media-breakpoint-down(md) {
+      font-size: $font-xlarge !important;
+    }
+
     @include media-breakpoint-down(sm) {
       width: min-content;
+      font-size: $font-xlarge !important;
     }
   }
 
@@ -25,19 +30,10 @@
   }
 
   .btn {
-    max-width: 267px;
-
-    //responsive
-    @include media-breakpoint-down(xl) {
-      width: 100% !important;
-      max-width: 100%;
-    }
-  }
-
-  .brain-image-container {
-    .brain-image {
-      max-width: 250px;
-    }
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white;
+    width: fit-content;
   }
 }
 

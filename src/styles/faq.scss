@@ -1,0 +1,25 @@
+@use "./_custom" as *;
+
+.header-image {
+  object-position: center top;
+}
+
+.faq-section {
+  background-color: $white;
+  padding: 6rem 10rem;
+  gap: 50px;
+
+  //responsive
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 1rem;
+  }
+
+  .card-header {
+    cursor: pointer;
+  }
+
+  .card-header[aria-expanded="true"] .fa-chevron-right {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+}
