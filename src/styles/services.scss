@@ -22,6 +22,17 @@
   }
 }
 
+.cards-section {
+  background-color: $blue-light;
+  padding: 0rem 10rem 6rem 10rem;
+  gap: 50px;
+
+  //responsive
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 1rem;
+  }
+}
+
 .overview-section {
   padding: 6rem 8rem;
 

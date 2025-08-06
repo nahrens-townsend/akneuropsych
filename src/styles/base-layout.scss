@@ -4,6 +4,10 @@ body {
   font-family: sans-serif !important;
 }
 
+.row {
+  --bs-gutter-x: 0rem !important;
+}
+
 .header {
   font-size: $font-xlarge;
 }

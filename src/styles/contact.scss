@@ -1,0 +1,55 @@
+@use "./_custom" as *;
+
+.contact-section {
+  background-color: $white;
+  gap: 50px;
+  padding: 6rem 0rem;
+
+  .img {
+    height: 50vh;
+  }
+
+  .btn {
+    background-color: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+    width: fit-content;
+  }
+
+  .sidebar-contact {
+    background-color: $blue-light;
+    border: 1px solid #e8e8e8;
+    width: fit-content;
+    height: fit-content;
+    max-width: 350px;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      font-size: medium;
+    }
+
+    //responsive
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+.map-section {
+  background-color: $blue-light;
+  padding: 6rem 0rem;
+  gap: 50px;
+
+  .map-section-filler {
+    width: 320px;
+
+    //responsive
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}

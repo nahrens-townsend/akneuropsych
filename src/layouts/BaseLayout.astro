@@ -1,6 +1,5 @@
 ---
 import "../styles/main.scss"; // Adjust path if needed
-// import "../styles/base-layout.scss";
 import "../styles/base-layout.scss";
 const { title = "HealthPro Clinic" } = Astro.props;
 ---
@@ -17,9 +16,9 @@ const { title = "HealthPro Clinic" } = Astro.props;
     />
     <style></style>
   </head>
-  <body class="container-fluid p-0">
+  <body class="">
     <slot name="nav" />
-    <main class="">
+    <main class="container-fluid p-0">
       <slot />
     </main>
     <slot name="footer" />

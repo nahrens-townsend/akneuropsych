@@ -2,34 +2,137 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/contact.scss";
 ---
 
+<!-- START THE CONTENT FOR THE INTRO -->
 <BaseLayout title="Contact Us - AK Neuropsychology">
   <slot name="nav"><NavBar /></slot>
-
-  <section class="bg-white">
-    <div class="container">
-      <h2 class="text-center mb-4">Contact Us</h2>
-      <form class="row g-3">
-        <div class="col-md-6">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" required />
+  <img
+    class="header-image w-100 object-fit-cover"
+    src="/images/header-img-5.jpg"
+    alt=""
+  />
+  <section id="contact" class="contact-section row justify-content-center">
+    <div class="col-11 col-md-6 d-flex flex-column gap-3">
+      <h2 class="h1 purpose-title text-primary m-0">Book an Appointment</h2>
+      <p class="mb-0 text-secondary">
+        Complete the form below and we will get in touch with you within 24
+        hours.
+      </p>
+      <form
+        id="contact-me-form"
+        class="d-flex flex-column gap-3"
+        method="POST"
+        action="send"
+        enctype="multipart/form-data"
+      >
+        <input
+          type="text"
+          class="form-control"
+          id="url-input"
+          name="url"
+          style="display: none;"
+        />
+        <div class="form-group">
+          <label for="name-input">Name*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name-input"
+            name="name"
+            placeholder=""
+            required
+          />
         </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" required />
+        <div class="form-group">
+          <label for="email-input">Email*</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email-input"
+            name="email"
+            placeholder=""
+            required
+          />
         </div>
-        <div class="col-12">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="4" required
-          ></textarea>
+        <div class="form-group">
+          <label for="subject-input">Subject*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject-input"
+            name="subject"
+            placeholder=""
+            required
+          />
         </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn mt-3">Send Message</button>
+        <div class="form-group">
+          <label for="message-input">Message*</label>
+          <textarea
+            class="form-control"
+            id="message-input"
+            name="message"
+            rows="3"
+            placeholder=""
+            required></textarea>
         </div>
+        <!-- <div class="form-group text-center">
+          <div
+            class="g-recaptcha d-inline-block"
+            data-sitekey="6LfzHXYdAAAAAJD5OjeCK3YbgqpBc8npSLmUxC3J"
+          >
+          </div>
+        </div> -->
+        <button
+          type="submit"
+          value="submit"
+          class="btn btn-primary btn-lg w-25 rounded-0">Submit</button
+        >
+        <span class="output_message"></span>
       </form>
     </div>
+    <div class="sidebar-contact p-4">
+      <h3 class="h5">AK Neuropsychology</h3>
+      <ul>
+        <li>#130, 4520 16 Ave. NW</li>
+        <li>Calgary, AB&nbsp; T3B 0M6</li>
+        <li class=""><i class="fa fa-phone fa"></i> 587.216.8132</li>
+        <li>
+          <i class="fa fa-envelope fa"></i>
+          <a href="mailto:akneuropsych.contact@gmail.com"
+            >akneuropsych.contact@gmail.com</a
+          >
+        </li>
+      </ul>
+      <h3 class="h5">Office Hours</h3>
+      <ul>
+        <li>Mon: 9am–5pm</li>
+        <li>Tues: 9am–5pm</li>
+        <li>Wed: 9am–5pm</li>
+        <li>Thurs: 9am–5pm</li>
+        <li>Fri: 9am–5pm</li>
+      </ul>
+      <a
+        href="https://maps.app.goo.gl/63zEMHUMzCoTXqwK9"
+        class="btn btn-primary btn-md btn-sidebar w-100 rounded-0"
+        target="_blank">Get Directions</a
+      >
+    </div>
   </section>
-
+  <section id="map-section" class="map-section d-flex justify-content-center">
+    <div class="col-11 col-md-6 d-flex flex-column gap-3">
+      <h2 class="h1 purpose-title text-primary m-0">Get Directions</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.0876439898702!2d-114.1626977231417!3d51.06993214256716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716ef854e22083%3A0x2b6402bbbc847b1c!2s4520%2016%20Ave%20NW%2C%20Calgary%2C%20AB%20T3B%200N9!5e0!3m2!1sen!2sca!4v1754454102077!5m2!1sen!2sca"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="map-section-filler"></div>
+  </section>
   <slot name="footer"><Footer /></slot>
 </BaseLayout>
