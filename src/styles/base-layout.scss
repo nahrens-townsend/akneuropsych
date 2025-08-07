@@ -15,3 +15,7 @@ body {
 .header-image {
   max-height: 450px;
 }
+
+.btn:hover {
+  background-color: $grey-light !important;
+}

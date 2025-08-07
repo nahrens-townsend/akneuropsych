@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BookAppointment from "../components/BookAppointment.astro";
 import "../styles/resources.scss";
 ---
 
@@ -156,5 +157,6 @@ import "../styles/resources.scss";
     </div>
   </section>
 
+  <slot name="book-appointment"><BookAppointment /></slot>
   <slot name="footer"><Footer /></slot>
 </BaseLayout>

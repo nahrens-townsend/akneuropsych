@@ -1,0 +1,19 @@
+@use "./_custom" as *;
+
+.book-appointment-section {
+  background-color: $primary;
+  color: $white;
+  height: 15vh;
+
+  //responsive
+  @include media-breakpoint-down(sm) {
+    height: 25vh;
+    flex-direction: column;
+  }
+
+  .btn {
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white;
+  }
+}

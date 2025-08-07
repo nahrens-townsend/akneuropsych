@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/what-we-do.scss";
+import BookAppointment from "../components/BookAppointment.astro";
 ---
 
 <BaseLayout title="What We Do - AK Neuropsychology">
@@ -22,7 +23,7 @@ import "../styles/what-we-do.scss";
       <h1 class="header m-0">Comprehensive Assessments</h1>
       <a
         href="/contact"
-        class="btn btn-primary btn-lg d-inline-flex align-items-center justify-content-between rounded-0"
+        class="btn btn-secondary btn-lg d-inline-flex align-items-center justify-content-between rounded-0"
       >
         Book An Appointment
         <span class="ms-2">
@@ -57,5 +58,6 @@ import "../styles/what-we-do.scss";
     </div>
   </section>
 
+  <slot name="book-appointment"><BookAppointment /></slot>
   <slot name="footer"><Footer /></slot>
 </BaseLayout>
