@@ -5,7 +5,6 @@ import Footer from "../components/Footer.astro";
 import "../styles/contact.scss";
 ---
 
-<!-- START THE CONTENT FOR THE INTRO -->
 <BaseLayout title="Contact Us - AK Neuropsychology">
   <slot name="nav"><NavBar /></slot>
   <img
@@ -26,16 +25,6 @@ import "../styles/contact.scss";
         data-netlify="true"
         class="d-flex flex-column gap-3"
       >
-        <input type="hidden" name="form-name" value="contact" />
-
-        <input
-          type="text"
-          class="form-control"
-          id="url-input"
-          name="url"
-          style="display: none;"
-        />
-
         <div class="form-group">
           <label for="name-input">Name*</label>
           <input
@@ -78,11 +67,6 @@ import "../styles/contact.scss";
             rows="3"
             required></textarea>
         </div>
-
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
 
         <button type="submit" class="btn btn-primary btn-lg w-25 rounded-0"
           >Submit</button
