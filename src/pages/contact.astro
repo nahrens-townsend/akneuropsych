@@ -23,8 +23,19 @@ import "../styles/contact.scss";
         name="contact"
         method="POST"
         data-netlify="true"
+        netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
         class="d-flex flex-column gap-3"
       >
+        <p class="d-none">
+          <label>
+            Don’t fill this out if you’re human: <input
+              name="bot-field"
+              type="text"
+            />
+          </label>
+        </p>
+
         <div class="form-group">
           <label for="name-input">Name*</label>
           <input
@@ -67,6 +78,8 @@ import "../styles/contact.scss";
             rows="3"
             required></textarea>
         </div>
+
+        <div data-netlify-recaptcha="true"></div>
 
         <button type="submit" class="btn btn-primary btn-lg w-25 rounded-0"
           >Submit</button

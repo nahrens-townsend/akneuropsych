@@ -36,6 +36,10 @@
     color: $white;
     width: fit-content;
   }
+
+  .btn:hover {
+    background-color: $primary;
+  }
 }
 
 .purpose-section {
