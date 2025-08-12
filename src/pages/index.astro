@@ -1,18 +1,134 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NavBar from "../components/NavBar.astro";
-import BookAppointment from "../components/BookAppointment.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/index.scss";
+import BookAppointment from "../components/BookAppointment.astro";
 ---
 
-<BaseLayout title="AK Neuropsychology - Home">
+<BaseLayout title="Home - AK Neuropsychology">
   <slot name="nav"><NavBar /></slot>
+  <section
+    id="home"
+    class="intro-section row justify-content-center align-items-center text-white"
+  >
+    <!-- START THE CONTENT FOR THE INTRO -->
 
-  <section class="hero bg-primary text-white text-center">
+    <div class="content d-flex flex-column align-items-center w-auto gap-4">
+      <h1 class="header m-0">Comprehensive Assessments</h1>
+      <a
+        href="/contact"
+        class="btn btn-secondary btn-lg d-inline-flex align-items-center justify-content-between rounded-0"
+      >
+        Book An Appointment
+        <span class="ms-2">
+          <i class="fas fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section class="purpose-section">
+    <div class="row text-center justify-content-center">
+      <div class="col-md-8">
+        <div class="d-flex flex-column gap-3 text-secondary align-items-center">
+          <h2 class="header text-secondary m-0 text-info">What We Do</h2>
+          <div class="description">
+            Neuropsychology is a subspecialty of Psychology that focuses on the
+            study of brain – behaviour relationships. The role of a
+            Neuropsychologist is to evaluate a person’s cognitive and emotional
+            functioning, to determine diagnosis, and to provide treatment
+            recommendations.
+          </div>
+          <div class="description">
+            Dr. Kilgour works collaboratively with a number of other
+            Psychologists within the <a
+              href="https://www.avapsychologygroup.ca/"
+              target="_blank"
+              rel="noopener noreferrer">AVA Psychology Group</a
+            > who provide specialized services.
+          </div>
+          <a href="/services" class="btn btn-primary btn-lg w-50 rounded-0">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="your-health-section bg-primary text-white text-center">
     <div class="container py-5">
-      <h1 class="display-4">Your Health, Our Mission</h1>
-      <p class="lead">Compassionate care for your whole family</p>
-      <a href="/contact" class="btn btn-light mt-3">Book an Appointment</a>
+      <h1 class="display-4">Your Recovery, Our Mission</h1>
+      <p class="lead">
+        Expert neuropsychological care to help you understand your brain,
+        rebuild your confidence, and move forward after injury.
+      </p>
+    </div>
+  </section>
+
+  <section class="meet-dr-kilgour">
+    <div class="row text-center justify-content-center">
+      <div class="col-md-8">
+        <div
+          class="headshot-wrapper d-flex flex-column align-items-center gap-3"
+        >
+          <img
+            class="headshot object-fit-cover float-start me-3 mb-1 rounded-circle border border-primary border-2"
+            src="/images/headshot.jpg"
+            alt=""
+          />
+          <div>
+            Dr. Andrea Kilgour is a clinical neuropsychologist with over 20
+            years of experience providing expert assessments in areas such as
+            brain injury, dementia, intellectual disability, and concussion.
+            Earning her doctorate at the top of her class from Queen’s
+            University, she has worked in academic, hospital, and private
+            practice settings across Canada. Dedicated to delivering timely,
+            high-quality care, she strives to help individuals understand the
+            connection between cognitive, mental, and physical health.
+          </div>
+          <a href="/meet" class="btn btn-primary btn-lg w-50 rounded-0">
+            Meet Dr. Kilgour
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <img
+    class="header-image w-100 object-fit-cover"
+    src="/images/header-img-13.jpg"
+    alt=""
+  />
+
+  <section class="still-have-questions-section">
+    <div class="row text-center justify-content-center">
+      <div class="col-md-8">
+        <div class="d-flex flex-column gap-3 text-secondary align-items-center">
+          <h2 class="header text-secondary m-0 text-info">
+            Still Have Questions?
+          </h2>
+          <div class="description">
+            We understand that navigating cognitive and emotional health
+            concerns can feel overwhelming. If you’re looking for more
+            information about our services, assessment process, or common
+            neuropsychology topics, our <a
+              href="/faq"
+              class="text-info fw-semibold">FAQ</a
+            > page has answers to many of the questions we hear most often.
+          </div>
+          <div class="description">
+            You can also visit our <a
+              href="/resources"
+              class="text-info fw-semibold">Resources</a
+            >
+            page for helpful articles, guides, and links to further support.
+          </div>
+          <a href="/services" class="btn btn-primary btn-lg w-50 rounded-0">
+            Learn More About Our Services
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 

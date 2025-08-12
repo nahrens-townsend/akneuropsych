@@ -1,0 +1,124 @@
+@use "./_custom" as *;
+
+.intro-section {
+  height: 50vh;
+  background-image: url("/images/header-img-9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .content {
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 1);
+  }
+
+  .header {
+    font-weight: 600;
+    font-size: 3rem !important;
+
+    //responsive
+    @include media-breakpoint-down(md) {
+      font-size: $font-xlarge !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: min-content;
+      font-size: $font-xlarge !important;
+    }
+  }
+
+  .description {
+    font-size: $font-medium;
+  }
+
+  .btn {
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white;
+    width: fit-content;
+  }
+
+  .btn:hover {
+    background-color: $primary !important;
+  }
+}
+
+.purpose-section {
+  padding: 6rem 8rem;
+
+  //responsive
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 2rem;
+  }
+
+  .btn {
+    background-color: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+    width: fit-content;
+
+    // responsive
+    @include media-breakpoint-down(md) {
+      width: 100% !important;
+    }
+  }
+}
+
+.your-health-section {
+  padding: 3rem 5rem;
+
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 2rem;
+  }
+}
+
+.meet-dr-kilgour {
+  padding: 6rem 8rem;
+  background-color: $blue-light;
+
+  //responsive
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 2rem;
+  }
+
+  .headshot {
+    min-width: 180px;
+    height: 180px;
+  }
+
+  .btn {
+    background-color: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+    width: fit-content;
+
+    // responsive
+    @include media-breakpoint-down(md) {
+      width: 100% !important;
+    }
+  }
+}
+
+.header-image {
+  object-position: 10% 40%;
+}
+
+.still-have-questions-section {
+  padding: 6rem 8rem;
+
+  //responsive
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 2rem;
+  }
+
+  .btn {
+    background-color: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+    width: fit-content;
+
+    // responsive
+    @include media-breakpoint-down(md) {
+      width: 100% !important;
+    }
+  }
+}

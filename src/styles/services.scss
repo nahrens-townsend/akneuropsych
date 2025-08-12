@@ -33,6 +33,14 @@
   }
 }
 
+.your-health-section {
+  padding: 3rem 5rem;
+
+  @include media-breakpoint-down(xl) {
+    padding: 4rem 2rem;
+  }
+}
+
 .overview-section {
   padding: 6rem 10rem;
 
